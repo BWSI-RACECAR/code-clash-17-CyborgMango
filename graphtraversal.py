@@ -84,10 +84,11 @@ class Solution:
         myGraph={}
         nodes=graph.get_nodes()
         for i in range(len(nodes)):
-            myGraph[i]=[]
+            myGraph[i]=(0,[])
             for j in graph.get_outgoing_edges(nodes[i]):
                 print("node, adjacent: "+str(i)+", "+str(j))
-                myGraph[i].append((j,graph.value(nodes[i],j)))
+                myGraph[i][1].append(j)
+                j[0]=graph.value(nodes[i],j)
         for i in myGraph:
             print(i)
         output=[]
@@ -100,7 +101,6 @@ class Solution:
             #return type: int
             
             #TODO: Write code below to return an int with the solution to the prompt.
-            pass
 
 def main():
     tc1 = Solution()
