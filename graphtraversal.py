@@ -81,9 +81,15 @@ class Solution:
     
     def spath_algo(self, graph, start_node):
         print("graph: "+str(graph))
-        for i in graph.get_nodes():
-            for j in graph.get_outgoing_edges(i):
+        myGraph=[]
+        nodes=graph.get_nodes()
+        for i in len(nodes):
+            myGraph.append([nodes[i]])
+            for j in graph.get_outgoing_edges(nodes[i]):
                 print("node, adjacent: "+str(i)+", "+str(j))
+                myGraph[i].append(j)
+        for i in myGraph:
+            print(i)
         output=[]
         output.append(graph('start'))
         for i in output:
