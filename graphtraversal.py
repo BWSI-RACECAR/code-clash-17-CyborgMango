@@ -80,9 +80,9 @@ class Graph(object):
 class Solution:
     
     def spath_algo(self, graph, start_node):
+        print(graph.get_nodes())
         output=[]
         output.append(graph('start'))
-        print(graph.get_nodes())
         for i in output:
             for j in graph[i[len(i)-1]][1]:
                 newPath=i
