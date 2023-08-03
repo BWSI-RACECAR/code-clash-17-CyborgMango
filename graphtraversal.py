@@ -88,7 +88,7 @@ class Solution:
             for j in graph.get_outgoing_edges(nodes[i]):
                 print("node, adjacent: "+str(i)+", "+str(j))
                 myGraph[i][1].append(j)
-                j[0]=graph.value(nodes[i],j)
+                myGraph[j][0]=graph.value(nodes[i],j)
         for i in myGraph:
             print(i)
         output=[]
