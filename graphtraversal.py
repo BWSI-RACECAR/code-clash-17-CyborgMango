@@ -83,6 +83,7 @@ class Solution:
         print("graph: "+str(graph))
         myGraph={}
         nodes=graph.get_nodes()
+        print("nodes: "+str(nodes))
         for i in range(len(nodes)):
             myGraph[i]=(0,[])
             for j in graph.get_outgoing_edges(nodes[i]):
