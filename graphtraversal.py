@@ -83,13 +83,11 @@ class Solution:
         print("graph: "+str(graph))
         myGraph={}
         nodes=graph.get_nodes()
-        print("nodes: "+str(nodes))
         for i in range(len(nodes)):
-            myGraph[i]=(0,[])
+            myGraph[i]=[]
             for j in graph.get_outgoing_edges(nodes[i]):
                 print("node, adjacent: "+str(i)+", "+str(j))
-                myGraph[i][1].append(j)
-                myGraph[j][0]=graph.value(nodes[i],j)
+                myGraph[i].append((j,graph.value(nodes[i],j)))
         for i in myGraph:
             print(i)
         output=[]
