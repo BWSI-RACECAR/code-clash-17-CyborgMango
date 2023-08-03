@@ -80,7 +80,8 @@ class Graph(object):
 class Solution:
     
     def spath_algo(self, graph, start_node):
-        print(graph.get_nodes())
+        print(graph)
+
         output=[]
         output.append(graph('start'))
         for i in output:
