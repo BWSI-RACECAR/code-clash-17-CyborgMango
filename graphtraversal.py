@@ -81,10 +81,10 @@ class Solution:
     
     def spath_algo(self, graph, start_node):
         print("graph: "+str(graph))
-        myGraph=[]
+        myGraph={}
         nodes=graph.get_nodes()
         for i in range(len(nodes)):
-            myGraph.append([nodes[i]])
+            myGraph[i]=[]
             for j in graph.get_outgoing_edges(nodes[i]):
                 print("node, adjacent: "+str(i)+", "+str(j))
                 myGraph[i].append((j,graph.value(nodes[i],j)))
@@ -93,16 +93,7 @@ class Solution:
         output=[]
         output.append(graph('start'))
         for i in output:
-            for j in graph[i[len(i)-1]][1]:
-                newPath=i
-                newPath.append(j[0])
-                if newPath not in output and j[0] not in i:
-                    output.append(newPath)
-                if 'finish' in output[len(output)-1]:
-                    iter=0
-                    for i in output[len(output)-1]:
-                        #iter+=
-                        pass
+            for j in 
 
             #type graph: String Dictionary
             #type start_node: 
